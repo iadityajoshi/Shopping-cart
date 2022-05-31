@@ -1,0 +1,14 @@
+.filters{
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    width: 20%;
+    margin: 10px;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters > span{
+    padding-bottom: 20px;  
+}
