@@ -42,12 +42,20 @@ const SingleProduct = ({ prod }) => {
             <Rating rating={Math.round(prod.rating.rate)} />
           </Card.Subtitle>
           {cart.some((item) => item.id === prod.id) ? (
-            <Button variant="danger"
-            onClick= {()=> dispatch({type: 'REMOVE_FROM_CART', payload: prod}) } >
-              Remove from cart</Button>
+            <Button
+              variant="danger"
+              onClick={() =>
+                dispatch({ type: "REMOVE_FROM_CART", payload: prod })
+              }
+            >
+              Remove from cart
+            </Button>
           ) : (
-            <Button variant="primary" disabled={!prod.inStock} 
-            onClick= {()=> dispatch({type: 'ADD_TO_CART', payload: prod}) }  >
+            <Button
+              variant="primary"
+              disabled={!prod.inStock}
+              onClick={() => dispatch({ type: "ADD_TO_CART", payload: prod })}
+            >
               {!prod.inStock ? "Out of stock" : "Add to cart"}
             </Button>
           )}
